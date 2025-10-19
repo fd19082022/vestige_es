@@ -1,0 +1,11 @@
+
+CREATE TABLE IF NOT EXISTS publicaciones_imagenes (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  publicacion_id BIGINT UNSIGNED NOT NULL,
+  ruta VARCHAR(255) NOT NULL,
+  es_principal TINYINT(1) NOT NULL DEFAULT 0,
+  creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY idx_img_pub (publicacion_id),
+  CONSTRAINT fk_img_pub FOREIGN KEY (publicacion_id) REFERENCES publicaciones(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
