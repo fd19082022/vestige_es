@@ -1,0 +1,38 @@
+/* admin/styles.css */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --ink: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #8E3D56;
+  --accent-2: #AB4E6A;
+  --ok: #16a34a;
+  --warn: #f59e0b;
+  --err: #ef4444;
+}
+* { box-sizing: border-box; }
+body { margin:0; padding:2rem; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+  background: linear-gradient(160deg, var(--bg), #0b1022 40%); color: var(--ink); }
+.header { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.5rem; }
+.header h1 { font-size:1.4rem; margin:0; }
+.nav { display:flex; gap:.6rem; flex-wrap:wrap; }
+.nav a { text-decoration:none; padding:.55rem .8rem; border-radius:.8rem; border:1px solid #1f2937; color: var(--ink); background: #0b1222; }
+.nav a.active, .nav a:hover { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(142,61,86,.2) inset;}
+.card { background: var(--card); border:1px solid #1f2937; border-radius:1rem; padding:1rem; margin-bottom:1rem; }
+.table { width:100%; border-collapse: collapse; font-size:.95rem; }
+.table th, .table td { padding:.6rem .5rem; border-bottom:1px solid #1f2937; vertical-align: top; }
+.badge { padding:.1rem .5rem; border-radius:.5rem; font-size:.8rem; border:1px solid #1f2937; color: var(--muted);}
+.badge.ok { color:#c7f9cc; border-color: var(--ok); }
+.badge.warn { color:#fde68a; border-color: var(--warn); }
+.badge.err { color:#fecaca; border-color: var(--err); }
+.btn { display:inline-block; padding:.45rem .7rem; border-radius:.6rem; border:1px solid #1f2937; background:#0b1222; color:var(--ink); text-decoration:none; cursor:pointer; }
+.btn:hover { border-color: var(--accent-2); }
+.btn.small { font-size:.85rem; padding:.35rem .55rem; }
+.btn.ok { border-color: var(--ok); }
+.btn.warn { border-color: var(--warn); }
+.btn.err { border-color: var(--err); }
+.row-actions { display:flex; gap:.35rem; flex-wrap:wrap; }
+form.inline { display:inline; margin:0; }
+.searchbar { display:flex; gap:.5rem; margin:.8rem 0; }
+.searchbar input[type="text"], select { background:#0b1222; border:1px solid #1f2937; color:var(--ink); padding:.45rem .55rem; border-radius:.6rem; min-width: 10rem; }
+.footer { margin-top:2rem; color:var(--muted); font-size:.85rem; text-align:center; }
